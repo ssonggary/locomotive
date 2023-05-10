@@ -3,11 +3,11 @@ const scroller = new LocomotiveScroll({
   smooth: true,
 });
 
-WebGLSampler.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-scroll.on("scroll", ScrollTrigger.update);
+scroller.on("scroll", ScrollTrigger.update);
 
-ScrollTrigger.scrollProxy(".container", {
+ScrollTrigger.scrollerProxy(".container", {
   scrollTop(value) {
     return arguments.length ? scroller.scrollTo(value, 0, 0) : scroller.scroll.instance.scroll.y;
   },
@@ -20,3 +20,16 @@ ScrollTrigger.scrollProxy(".container", {
     };
   },
 });
+
+ScrollTrigger.create({
+  trigger: ".image-mask",
+  scroller: ".container",
+  start: "top+=30% 50%",
+  end: "bottom-=40% 50%",
+  animation: gsap.to(".image-mask", { backgroundSize: "120%" }),
+  scrub: 2,
+});
+
+ScrollTrigger.addEventListener("refresh", () => scroller.update());
+
+ScrollTrigger.refresh();
