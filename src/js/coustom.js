@@ -19,6 +19,8 @@ ScrollTrigger.scrollerProxy(".container", {
       height: window.innerHeight,
     };
   },
+
+  pinType: document.querySelector(".container").style.transform ? "transform" : "fixed",
 });
 
 ScrollTrigger.create({
