@@ -114,32 +114,32 @@ cite {
 }
 
 /* section-3 */
-.container > .section-3 {
+.container > .section-4 {
   height: 100vh;
   display: grid;
   grid-template-columns: 40% 60%;
   position: relative;
 }
-.container > .section-3 > .image-wrapper {
+.container > .section-4 > .image-wrapper {
   height: 100%;
   width: 100%;
 }
-.container > .section-3 > .image-wrapper > img {
+.container > .section-4 > .image-wrapper > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-.container > .section-3 > .copy {
+.container > .section-4 > .copy {
   font-size: 8vmin;
   height: 100vh;
   width: 100%;
   display: grid;
   align-content: center;
 }
-.container > .section-3 > .copy > blockquote {
+.container > .section-4 > .copy > blockquote {
   margin: 0 32px;
 }
-.container > .section-3 > .copyright {
+.container > .section-4 > .copyright {
   position: absolute;
   bottom: 5%;
   left: 50%;
